@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OrderHeader>
+  <CustomerNumber>CustomerNumber1</CustomerNumber>
+  <Comments>Comment Section</Comments>
+  <PO>PO1</PO>
+  <ShipToName>Recipient Name</ShipToName>
+  <ShipToPhone>(555) 123 - 4567</ShipToPhone>
+  <ShipToAddress1>Address1</ShipToAddress1>
+  <ShipToAddress2>Address2</ShipToAddress2>
+  <ShipToCity>City</ShipToCity>
+  <ShipToState>State</ShipToState>
+  <ShipToPostalCode>Postal</ShipToPostalCode>
+  <ShipToCountry>Cntry</ShipToCountry>
+  <ShipMethod>UPS</ShipMethod>
+  <EmailListError>errors1@example.com;errors2@example.com</EmailListError>
+  <EmailListTrackingInfo>tracking1@example.com;tracking2@example.com</EmailListTrackingInfo>
+  <EmailListEIDInfo>manifest@example.com</EmailListEIDInfo>
+  <WSOrderId>anyType</WSOrderId>
+  <OrderLineHeader>
+    <SkuName>SkuName1</SkuName>
+    <Quantity>0</Quantity>
+    <Template>Template1</Template>
+    <Comment>Comment1</Comment>
+  </OrderLineHeader>
+</OrderHeader>
