@@ -18,12 +18,17 @@ namespace bLaserTag
         public MainOrder()
         {
             InitializeComponent();
+        }
+        
+        private void MainOrder_Load(object sender, EventArgs e)
+        {
             LoadComboBox();
             LoadDefaultOrder();
 
             //TODO: Add premise
             txtPONumber.DataBindings.Add("Text", order, "PO");
             chkRush.DataBindings.Add("Checked", order, "IsRush");
+            txtPremise.DataBindings.Add("Text", order, "PremiseID");
             txtComments.DataBindings.Add("Text", order, "Comments");
             cmbShippingMethods.DataBindings.Add("SelectedValue", order, "ShipMethod");
             txtShipperNumber.DataBindings.Add("Text", order, "ShippingAccountNumber");
@@ -36,6 +41,8 @@ namespace bLaserTag
             txtCountry.DataBindings.Add("Text", order, "ShipToCountry");
             txtPhone.DataBindings.Add("Text", order, "ShipToPhone");
             txtEmail.DataBindings.Add("Text", order, "EmailListError");
+
+            txtPONumber.Select();
         }
 
         private void LoadDefaultOrder()
@@ -52,6 +59,7 @@ namespace bLaserTag
             }
 
             order.PO = order.PO ?? string.Empty;
+            order.PremiseID = order.PremiseID ?? string.Empty;
             order.Comments = order.Comments ?? string.Empty;
             order.ShipMethod = order.ShipMethod ?? string.Empty;
             order.ShippingAccountNumber = order.ShippingAccountNumber ?? string.Empty;
@@ -81,6 +89,11 @@ namespace bLaserTag
         private void btnSave_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Test");
+        }
+
+        private void lstOrderLines_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lstOrderLines.SelectedItems.
         }
     }
 }

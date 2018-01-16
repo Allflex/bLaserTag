@@ -33,15 +33,5 @@ namespace bLaserTag
         {
 
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -52,7 +52,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1235, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(573, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,7 +107,7 @@
             this.mainOrder1.Location = new System.Drawing.Point(0, 33);
             this.mainOrder1.MinimumSize = new System.Drawing.Size(565, 665);
             this.mainOrder1.Name = "mainOrder1";
-            this.mainOrder1.Size = new System.Drawing.Size(1235, 1082);
+            this.mainOrder1.Size = new System.Drawing.Size(573, 717);
             this.mainOrder1.TabIndex = 1;
             // 
             // statusStrip1
@@ -115,9 +115,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1115);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 750);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1235, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(573, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -129,12 +129,13 @@
             // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1235, 1137);
+            this.ClientSize = new System.Drawing.Size(573, 772);
             this.Controls.Add(this.mainOrder1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(595, 828);
             this.Name = "MainWindow";
             this.Text = "bLazerTag";
             this.menuStrip1.ResumeLayout(false);

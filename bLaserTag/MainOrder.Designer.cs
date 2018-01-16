@@ -67,6 +67,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblPremise = new System.Windows.Forms.Label();
+            this.txtPremise = new System.Windows.Forms.TextBox();
             this.grpShipping.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -92,6 +94,8 @@
             // 
             // grpShipping
             // 
+            this.grpShipping.Controls.Add(this.txtPremise);
+            this.grpShipping.Controls.Add(this.lblPremise);
             this.grpShipping.Controls.Add(this.txtShipperNumber);
             this.grpShipping.Controls.Add(this.lblShippingAccount);
             this.grpShipping.Controls.Add(this.txtPhone);
@@ -342,10 +346,11 @@
             this.lstOrderLines.Location = new System.Drawing.Point(0, 43);
             this.lstOrderLines.MultiSelect = false;
             this.lstOrderLines.Name = "lstOrderLines";
-            this.lstOrderLines.Size = new System.Drawing.Size(565, 83);
+            this.lstOrderLines.Size = new System.Drawing.Size(565, 80);
             this.lstOrderLines.TabIndex = 6;
             this.lstOrderLines.UseCompatibleStateImageBehavior = false;
             this.lstOrderLines.View = System.Windows.Forms.View.Details;
+            this.lstOrderLines.SelectedIndexChanged += new System.EventHandler(this.lstOrderLines_SelectedIndexChanged);
             // 
             // columnHeader0
             // 
@@ -388,17 +393,17 @@
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 626);
+            this.panel1.Location = new System.Drawing.Point(0, 623);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 39);
+            this.panel1.Size = new System.Drawing.Size(565, 42);
             this.panel1.TabIndex = 9;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(338, 8);
+            this.btnCancel.Location = new System.Drawing.Point(338, 6);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(95, 28);
+            this.btnCancel.Size = new System.Drawing.Size(95, 33);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -406,9 +411,9 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(439, 8);
+            this.btnSave.Location = new System.Drawing.Point(439, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 28);
+            this.btnSave.Size = new System.Drawing.Size(123, 33);
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Save Order";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -435,7 +440,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 500);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(565, 126);
+            this.panel3.Size = new System.Drawing.Size(565, 123);
             this.panel3.TabIndex = 11;
             // 
             // panel4
@@ -448,6 +453,24 @@
             this.panel4.Size = new System.Drawing.Size(565, 43);
             this.panel4.TabIndex = 7;
             // 
+            // lblPremise
+            // 
+            this.lblPremise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPremise.AutoSize = true;
+            this.lblPremise.Location = new System.Drawing.Point(394, 28);
+            this.lblPremise.Name = "lblPremise";
+            this.lblPremise.Size = new System.Drawing.Size(91, 20);
+            this.lblPremise.TabIndex = 21;
+            this.lblPremise.Text = "Premise ID:";
+            // 
+            // txtPremise
+            // 
+            this.txtPremise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPremise.Location = new System.Drawing.Point(419, 59);
+            this.txtPremise.Name = "txtPremise";
+            this.txtPremise.Size = new System.Drawing.Size(130, 26);
+            this.txtPremise.TabIndex = 22;
+            // 
             // MainOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -458,6 +481,7 @@
             this.MinimumSize = new System.Drawing.Size(565, 665);
             this.Name = "MainOrder";
             this.Size = new System.Drawing.Size(565, 665);
+            this.Load += new System.EventHandler(this.MainOrder_Load);
             this.grpShipping.ResumeLayout(false);
             this.grpShipping.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -510,5 +534,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtPremise;
+        private System.Windows.Forms.Label lblPremise;
     }
 }
