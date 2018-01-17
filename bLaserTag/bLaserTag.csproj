@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="DataBindingUtils.cs" />
     <Compile Include="FlexOrderModel.cs" />
+    <Compile Include="MainOrderLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainOrderLine.Designer.cs">
+      <DependentUpon>MainOrderLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="ShippingMethod.cs" />
+    <EmbeddedResource Include="MainOrderLine.resx">
+      <DependentUpon>MainOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>

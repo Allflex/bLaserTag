@@ -85,7 +85,10 @@ namespace bLaserTag
                 Program.UpdateDefaultOrder(order);
                 window.Close();
             };
-            orderModifier.OrderCanceled += (s, evt) => { window.Close(); };
+            orderModifier.OrderCanceled += (s, evt) => {
+                window.DialogResult = DialogResult.Cancel;
+                window.Close();
+            };
 
             window.ShowDialog();
         }

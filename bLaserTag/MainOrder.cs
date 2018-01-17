@@ -108,6 +108,24 @@ namespace bLaserTag
         {
             // TODO: Implement Method
             MessageBox.Show("Method not Implemented.");
+
+            var orderLineModifier = new MainOrderLine();
+
+            var window = new Form();
+            window.Controls.Add(orderLineModifier);
+            orderLineModifier.Dock = DockStyle.Fill;
+            window.Size = new System.Drawing.Size(orderLineModifier.MinimumSize.Width + 25, orderLineModifier.MinimumSize.Height + 50);
+            orderLineModifier.LineCompleted += (s, line) =>
+            {
+                throw new NotImplementedException();
+                window.Close();
+            };
+            orderLineModifier.LineCanceled += (s, evt) => {
+                window.DialogResult = DialogResult.Cancel;
+                window.Close();
+            };
+
+            window.ShowDialog();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
