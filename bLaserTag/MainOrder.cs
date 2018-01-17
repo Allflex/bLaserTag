@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
 
 namespace bLaserTag
 {
     public partial class MainOrder : UserControl
     {
-        AllfleXML.FlexOrder.OrderHeader order;
+        private readonly OrderHeader order = new OrderHeader();
+
+        public event EventHandler<OrderHeader> OrderCompleted;
+        public event EventHandler OrderCanceled;
 
         public MainOrder()
         {
@@ -22,61 +18,67 @@ namespace bLaserTag
         
         private void MainOrder_Load(object sender, EventArgs e)
         {
+            if (DesignMode) return;
             LoadComboBox();
+            SetDataBindings();
             LoadDefaultOrder();
-
-            //TODO: Add premise
-            txtPONumber.DataBindings.Add("Text", order, "PO");
-            chkRush.DataBindings.Add("Checked", order, "IsRush");
-            txtPremise.DataBindings.Add("Text", order, "PremiseID");
-            txtComments.DataBindings.Add("Text", order, "Comments");
-            cmbShippingMethods.DataBindings.Add("SelectedValue", order, "ShipMethod");
-            txtShipperNumber.DataBindings.Add("Text", order, "ShippingAccountNumber");
-            txtName.DataBindings.Add("Text", order, "ShipToName");
-            txtAddress1.DataBindings.Add("Text", order, "ShipToAddress1");
-            txtAddress2.DataBindings.Add("Text", order, "ShipToAddress2");
-            txtCity.DataBindings.Add("Text", order, "ShipToCity");
-            txtState.DataBindings.Add("Text", order, "ShipToState");
-            txtPostal.DataBindings.Add("Text", order, "ShipToPostalCode");
-            txtCountry.DataBindings.Add("Text", order, "ShipToCountry");
-            txtPhone.DataBindings.Add("Text", order, "ShipToPhone");
-            txtEmail.DataBindings.Add("Text", order, "EmailListError");
+        }
+        
+        public void LoadDefaultOrder()
+        {
+            if (!System.IO.File.Exists(Program.DefaultOrder))
+            {
+                order.Reset();
+            }
+            else
+            {
+                var doc = AllfleXML.FlexOrder.Parser.Import(Program.DefaultOrder);
+                AutoMapper.Mapper.Map(doc.OrderHeaders.SingleOrDefault(), order);
+            }
 
             txtPONumber.Select();
         }
 
-        private void LoadDefaultOrder()
-        {
-            string defaultOrder = ConfigurationManager.AppSettings["DefaultOrder"];
-            if (!System.IO.File.Exists(defaultOrder))
-            {
-                order = new AllfleXML.FlexOrder.OrderHeader();
-            }
-            else
-            {
-                var doc = AllfleXML.FlexOrder.Parser.Import(defaultOrder);
-                order = doc.OrderHeaders.SingleOrDefault();
-            }
-
-            order.PO = order.PO ?? string.Empty;
-            order.PremiseID = order.PremiseID ?? string.Empty;
-            order.Comments = order.Comments ?? string.Empty;
-            order.ShipMethod = order.ShipMethod ?? string.Empty;
-            order.ShippingAccountNumber = order.ShippingAccountNumber ?? string.Empty;
-            order.ShipToName = order.ShipToName ?? string.Empty;
-            order.ShipToAddress1 = order.ShipToAddress1 ?? string.Empty;
-            order.ShipToAddress2 = order.ShipToAddress2 ?? string.Empty;
-            order.ShipToCity = order.ShipToCity ?? string.Empty;
-            order.ShipToState = order.ShipToState ?? string.Empty;
-            order.ShipToPostalCode = order.ShipToPostalCode ?? string.Empty;
-            order.ShipToCountry = order.ShipToCountry ?? string.Empty;
-            order.ShipToPhone = order.ShipToPhone ?? string.Empty;
-            order.EmailListError = order.EmailListError ?? string.Empty;
-        }
-
         public void LoadOrder(AllfleXML.FlexOrder.OrderHeader orderHeader)
         {
-            order = orderHeader;
+            AutoMapper.Mapper.Map(orderHeader, order);
+        }
+
+        public void SetDataBindings()
+        {
+            // Reminder - These bindings are only valid for the current instance of this.order
+            // if this.order is set to a new instance, then these bindings will have to be setup again.
+            txtPONumber.DataBindings.Clear();
+            chkRush.DataBindings.Clear();
+            txtPremise.DataBindings.Clear();
+            txtComments.DataBindings.Clear();
+            cmbShippingMethods.DataBindings.Clear();
+            txtShipperNumber.DataBindings.Clear();
+            txtName.DataBindings.Clear();
+            txtAddress1.DataBindings.Clear();
+            txtAddress2.DataBindings.Clear();
+            txtCity.DataBindings.Clear();
+            txtState.DataBindings.Clear();
+            txtPostal.DataBindings.Clear();
+            txtCountry.DataBindings.Clear();
+            txtPhone.DataBindings.Clear();
+            txtEmail.DataBindings.Clear();
+
+            txtPONumber.DataBindings.Add("Text", order, "PO", false, DataSourceUpdateMode.OnPropertyChanged);
+            chkRush.DataBindings.Add("Checked", order, "IsRush", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtPremise.DataBindings.Add("Text", order, "PremiseID", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtComments.DataBindings.Add("Text", order, "Comments", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbShippingMethods.DataBindings.Add("SelectedValue", order, "ShipMethod", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtShipperNumber.DataBindings.Add("Text", order, "ShippingAccountNumber", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtName.DataBindings.Add("Text", order, "ShipToName", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtAddress1.DataBindings.Add("Text", order, "ShipToAddress1", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtAddress2.DataBindings.Add("Text", order, "ShipToAddress2", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtCity.DataBindings.Add("Text", order, "ShipToCity", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtState.DataBindings.Add("Text", order, "ShipToState", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtPostal.DataBindings.Add("Text", order, "ShipToPostalCode", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtCountry.DataBindings.Add("Text", order, "ShipToCountry", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtPhone.DataBindings.Add("Text", order, "ShipToPhone", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtEmail.DataBindings.Add("Text", order, "EmailListError", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void LoadComboBox()
@@ -86,14 +88,32 @@ namespace bLaserTag
             cmbShippingMethods.DataSource = ShippingMethod.GetShippingMethods().ToList();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            OrderCanceled?.Invoke(this, EventArgs.Empty);
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Test");
+            OrderCompleted?.Invoke(this, order);
+            LoadDefaultOrder();
         }
 
         private void lstOrderLines_SelectedIndexChanged(object sender, EventArgs e)
         {
             //lstOrderLines.SelectedItems.
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            // TODO: Implement Method
+            MessageBox.Show("Method not Implemented.");
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            // TODO: Implement Method
+            MessageBox.Show("Method not Implemented.");
         }
     }
 }

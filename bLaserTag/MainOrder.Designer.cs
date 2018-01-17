@@ -31,6 +31,8 @@
             this.lblPurchaseOrder = new System.Windows.Forms.Label();
             this.txtPONumber = new System.Windows.Forms.TextBox();
             this.grpShipping = new System.Windows.Forms.GroupBox();
+            this.txtPremise = new System.Windows.Forms.TextBox();
+            this.lblPremise = new System.Windows.Forms.Label();
             this.txtShipperNumber = new System.Windows.Forms.TextBox();
             this.lblShippingAccount = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -67,8 +69,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblPremise = new System.Windows.Forms.Label();
-            this.txtPremise = new System.Windows.Forms.TextBox();
             this.grpShipping.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,17 +79,19 @@
             // lblPurchaseOrder
             // 
             this.lblPurchaseOrder.AutoSize = true;
-            this.lblPurchaseOrder.Location = new System.Drawing.Point(3, 10);
+            this.lblPurchaseOrder.Location = new System.Drawing.Point(2, 6);
+            this.lblPurchaseOrder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPurchaseOrder.Name = "lblPurchaseOrder";
-            this.lblPurchaseOrder.Size = new System.Drawing.Size(137, 20);
+            this.lblPurchaseOrder.Size = new System.Drawing.Size(94, 13);
             this.lblPurchaseOrder.TabIndex = 0;
             this.lblPurchaseOrder.Text = "Purchase Order #:";
             // 
             // txtPONumber
             // 
-            this.txtPONumber.Location = new System.Drawing.Point(146, 7);
+            this.txtPONumber.Location = new System.Drawing.Point(97, 5);
+            this.txtPONumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPONumber.Name = "txtPONumber";
-            this.txtPONumber.Size = new System.Drawing.Size(182, 26);
+            this.txtPONumber.Size = new System.Drawing.Size(123, 20);
             this.txtPONumber.TabIndex = 1;
             // 
             // grpShipping
@@ -117,135 +119,172 @@
             this.grpShipping.Controls.Add(this.lblCity);
             this.grpShipping.Controls.Add(this.lblAddress1);
             this.grpShipping.Controls.Add(this.lblName);
-            this.grpShipping.Location = new System.Drawing.Point(7, 39);
-            this.grpShipping.MinimumSize = new System.Drawing.Size(555, 346);
+            this.grpShipping.Location = new System.Drawing.Point(5, 25);
+            this.grpShipping.Margin = new System.Windows.Forms.Padding(2);
+            this.grpShipping.MinimumSize = new System.Drawing.Size(370, 225);
             this.grpShipping.Name = "grpShipping";
-            this.grpShipping.Size = new System.Drawing.Size(555, 346);
+            this.grpShipping.Padding = new System.Windows.Forms.Padding(2);
+            this.grpShipping.Size = new System.Drawing.Size(370, 225);
             this.grpShipping.TabIndex = 2;
             this.grpShipping.TabStop = false;
             this.grpShipping.Text = "Shipping Details";
             // 
+            // txtPremise
+            // 
+            this.txtPremise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPremise.Location = new System.Drawing.Point(279, 38);
+            this.txtPremise.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPremise.Name = "txtPremise";
+            this.txtPremise.Size = new System.Drawing.Size(88, 20);
+            this.txtPremise.TabIndex = 22;
+            // 
+            // lblPremise
+            // 
+            this.lblPremise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPremise.AutoSize = true;
+            this.lblPremise.Location = new System.Drawing.Point(263, 18);
+            this.lblPremise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPremise.Name = "lblPremise";
+            this.lblPremise.Size = new System.Drawing.Size(61, 13);
+            this.lblPremise.TabIndex = 21;
+            this.lblPremise.Text = "Premise ID:";
+            // 
             // txtShipperNumber
             // 
-            this.txtShipperNumber.Location = new System.Drawing.Point(163, 59);
+            this.txtShipperNumber.Location = new System.Drawing.Point(109, 38);
+            this.txtShipperNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtShipperNumber.Name = "txtShipperNumber";
-            this.txtShipperNumber.Size = new System.Drawing.Size(173, 26);
+            this.txtShipperNumber.Size = new System.Drawing.Size(117, 20);
             this.txtShipperNumber.TabIndex = 20;
             // 
             // lblShippingAccount
             // 
             this.lblShippingAccount.AutoSize = true;
-            this.lblShippingAccount.Location = new System.Drawing.Point(6, 62);
+            this.lblShippingAccount.Location = new System.Drawing.Point(4, 40);
+            this.lblShippingAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblShippingAccount.Name = "lblShippingAccount";
-            this.lblShippingAccount.Size = new System.Drawing.Size(151, 20);
+            this.lblShippingAccount.Size = new System.Drawing.Size(104, 13);
             this.lblShippingAccount.TabIndex = 19;
             this.lblShippingAccount.Text = "Shipping Account #:";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(84, 311);
+            this.txtPhone.Location = new System.Drawing.Point(56, 202);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(205, 26);
+            this.txtPhone.Size = new System.Drawing.Size(138, 20);
             this.txtPhone.TabIndex = 16;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(127, 279);
+            this.txtEmail.Location = new System.Drawing.Point(85, 181);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(295, 26);
+            this.txtEmail.Size = new System.Drawing.Size(198, 20);
             this.txtEmail.TabIndex = 15;
             // 
             // cmbShippingMethods
             // 
             this.cmbShippingMethods.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbShippingMethods.FormattingEnabled = true;
-            this.cmbShippingMethods.Location = new System.Drawing.Point(139, 25);
+            this.cmbShippingMethods.Location = new System.Drawing.Point(93, 16);
+            this.cmbShippingMethods.Margin = new System.Windows.Forms.Padding(2);
             this.cmbShippingMethods.Name = "cmbShippingMethods";
-            this.cmbShippingMethods.Size = new System.Drawing.Size(197, 28);
+            this.cmbShippingMethods.Size = new System.Drawing.Size(133, 21);
             this.cmbShippingMethods.TabIndex = 18;
             // 
             // lblShippingMethod
             // 
             this.lblShippingMethod.AutoSize = true;
-            this.lblShippingMethod.Location = new System.Drawing.Point(6, 28);
+            this.lblShippingMethod.Location = new System.Drawing.Point(4, 18);
+            this.lblShippingMethod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblShippingMethod.Name = "lblShippingMethod";
-            this.lblShippingMethod.Size = new System.Drawing.Size(129, 20);
+            this.lblShippingMethod.Size = new System.Drawing.Size(87, 13);
             this.lblShippingMethod.TabIndex = 17;
             this.lblShippingMethod.Text = "Shipping Method";
             // 
             // txtState
             // 
             this.txtState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtState.Location = new System.Drawing.Point(278, 216);
+            this.txtState.Location = new System.Drawing.Point(185, 140);
+            this.txtState.Margin = new System.Windows.Forms.Padding(2);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(58, 26);
+            this.txtState.Size = new System.Drawing.Size(40, 20);
             this.txtState.TabIndex = 14;
             // 
             // txtPostal
             // 
             this.txtPostal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPostal.Location = new System.Drawing.Point(447, 216);
+            this.txtPostal.Location = new System.Drawing.Point(298, 140);
+            this.txtPostal.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostal.Name = "txtPostal";
-            this.txtPostal.Size = new System.Drawing.Size(102, 26);
+            this.txtPostal.Size = new System.Drawing.Size(69, 20);
             this.txtPostal.TabIndex = 13;
             // 
             // txtCountry
             // 
             this.txtCountry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCountry.Location = new System.Drawing.Point(491, 248);
+            this.txtCountry.Location = new System.Drawing.Point(327, 161);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(58, 26);
+            this.txtCountry.Size = new System.Drawing.Size(40, 20);
             this.txtCountry.TabIndex = 12;
             // 
             // txtCity
             // 
             this.txtCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCity.Location = new System.Drawing.Point(51, 216);
+            this.txtCity.Location = new System.Drawing.Point(34, 140);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(163, 26);
+            this.txtCity.Size = new System.Drawing.Size(110, 20);
             this.txtCity.TabIndex = 11;
             // 
             // txtAddress2
             // 
             this.txtAddress2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress2.Location = new System.Drawing.Point(23, 181);
+            this.txtAddress2.Location = new System.Drawing.Point(15, 118);
+            this.txtAddress2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(526, 26);
+            this.txtAddress2.Size = new System.Drawing.Size(352, 20);
             this.txtAddress2.TabIndex = 10;
             // 
             // txtAddress1
             // 
             this.txtAddress1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress1.Location = new System.Drawing.Point(23, 149);
+            this.txtAddress1.Location = new System.Drawing.Point(15, 97);
+            this.txtAddress1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.Size = new System.Drawing.Size(526, 26);
+            this.txtAddress1.Size = new System.Drawing.Size(352, 20);
             this.txtAddress1.TabIndex = 9;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(67, 91);
+            this.txtName.Location = new System.Drawing.Point(45, 59);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(482, 26);
+            this.txtName.Size = new System.Drawing.Size(323, 20);
             this.txtName.TabIndex = 8;
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(6, 314);
+            this.lblPhone.Location = new System.Drawing.Point(4, 204);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(72, 20);
+            this.lblPhone.Size = new System.Drawing.Size(51, 13);
             this.lblPhone.TabIndex = 7;
             this.lblPhone.Text = "Phone #:";
             // 
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
-            this.lblEmailAddress.Location = new System.Drawing.Point(6, 282);
+            this.lblEmailAddress.Location = new System.Drawing.Point(4, 183);
+            this.lblEmailAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmailAddress.Name = "lblEmailAddress";
-            this.lblEmailAddress.Size = new System.Drawing.Size(115, 20);
+            this.lblEmailAddress.Size = new System.Drawing.Size(76, 13);
             this.lblEmailAddress.TabIndex = 6;
             this.lblEmailAddress.Text = "Email Address:";
             // 
@@ -253,9 +292,10 @@
             // 
             this.lblCountry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(417, 251);
+            this.lblCountry.Location = new System.Drawing.Point(278, 163);
+            this.lblCountry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(68, 20);
+            this.lblCountry.Size = new System.Drawing.Size(46, 13);
             this.lblCountry.TabIndex = 5;
             this.lblCountry.Text = "Country:";
             // 
@@ -263,9 +303,10 @@
             // 
             this.lblPostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPostalCode.AutoSize = true;
-            this.lblPostalCode.Location = new System.Drawing.Point(342, 219);
+            this.lblPostalCode.Location = new System.Drawing.Point(228, 142);
+            this.lblPostalCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPostalCode.Name = "lblPostalCode";
-            this.lblPostalCode.Size = new System.Drawing.Size(99, 20);
+            this.lblPostalCode.Size = new System.Drawing.Size(67, 13);
             this.lblPostalCode.TabIndex = 4;
             this.lblPostalCode.Text = "Postal Code:";
             // 
@@ -273,45 +314,50 @@
             // 
             this.lblState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(220, 219);
+            this.lblState.Location = new System.Drawing.Point(147, 142);
+            this.lblState.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(52, 20);
+            this.lblState.Size = new System.Drawing.Size(35, 13);
             this.lblState.TabIndex = 3;
             this.lblState.Text = "State:";
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(6, 219);
+            this.lblCity.Location = new System.Drawing.Point(4, 142);
+            this.lblCity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(39, 20);
+            this.lblCity.Size = new System.Drawing.Size(27, 13);
             this.lblCity.TabIndex = 2;
             this.lblCity.Text = "City:";
             // 
             // lblAddress1
             // 
             this.lblAddress1.AutoSize = true;
-            this.lblAddress1.Location = new System.Drawing.Point(6, 126);
+            this.lblAddress1.Location = new System.Drawing.Point(4, 82);
+            this.lblAddress1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress1.Name = "lblAddress1";
-            this.lblAddress1.Size = new System.Drawing.Size(72, 20);
+            this.lblAddress1.Size = new System.Drawing.Size(48, 13);
             this.lblAddress1.TabIndex = 1;
             this.lblAddress1.Text = "Address:";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(6, 94);
+            this.lblName.Location = new System.Drawing.Point(4, 61);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 20);
+            this.lblName.Size = new System.Drawing.Size(38, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
             // chkRush
             // 
             this.chkRush.AutoSize = true;
-            this.chkRush.Location = new System.Drawing.Point(334, 9);
+            this.chkRush.Location = new System.Drawing.Point(223, 6);
+            this.chkRush.Margin = new System.Windows.Forms.Padding(2);
             this.chkRush.Name = "chkRush";
-            this.chkRush.Size = new System.Drawing.Size(114, 24);
+            this.chkRush.Size = new System.Drawing.Size(78, 17);
             this.chkRush.TabIndex = 3;
             this.chkRush.Text = "Rush order";
             this.chkRush.UseVisualStyleBackColor = true;
@@ -320,18 +366,20 @@
             // 
             this.txtComments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComments.Location = new System.Drawing.Point(17, 411);
+            this.txtComments.Location = new System.Drawing.Point(11, 267);
+            this.txtComments.Margin = new System.Windows.Forms.Padding(2);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(545, 78);
+            this.txtComments.Size = new System.Drawing.Size(365, 52);
             this.txtComments.TabIndex = 4;
             // 
             // lblComments
             // 
             this.lblComments.AutoSize = true;
-            this.lblComments.Location = new System.Drawing.Point(3, 388);
+            this.lblComments.Location = new System.Drawing.Point(2, 252);
+            this.lblComments.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblComments.Name = "lblComments";
-            this.lblComments.Size = new System.Drawing.Size(90, 20);
+            this.lblComments.Size = new System.Drawing.Size(59, 13);
             this.lblComments.TabIndex = 5;
             this.lblComments.Text = "Comments:";
             // 
@@ -343,10 +391,11 @@
             this.columnHeader2});
             this.lstOrderLines.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstOrderLines.FullRowSelect = true;
-            this.lstOrderLines.Location = new System.Drawing.Point(0, 43);
+            this.lstOrderLines.Location = new System.Drawing.Point(0, 28);
+            this.lstOrderLines.Margin = new System.Windows.Forms.Padding(2);
             this.lstOrderLines.MultiSelect = false;
             this.lstOrderLines.Name = "lstOrderLines";
-            this.lstOrderLines.Size = new System.Drawing.Size(565, 80);
+            this.lstOrderLines.Size = new System.Drawing.Size(377, 52);
             this.lstOrderLines.TabIndex = 6;
             this.lstOrderLines.UseCompatibleStateImageBehavior = false;
             this.lstOrderLines.View = System.Windows.Forms.View.Details;
@@ -371,49 +420,57 @@
             // 
             this.btnAdd.BackgroundImage = global::bLaserTag.Properties.Resources.add;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(3, 3);
+            this.btnAdd.Location = new System.Drawing.Point(2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(32, 32);
+            this.btnAdd.Size = new System.Drawing.Size(21, 21);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRemove
             // 
             this.btnRemove.BackgroundImage = global::bLaserTag.Properties.Resources.delete;
             this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemove.Enabled = false;
-            this.btnRemove.Location = new System.Drawing.Point(41, 3);
+            this.btnRemove.Location = new System.Drawing.Point(27, 2);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(32, 32);
+            this.btnRemove.Size = new System.Drawing.Size(21, 21);
             this.btnRemove.TabIndex = 7;
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 623);
+            this.panel1.Location = new System.Drawing.Point(0, 405);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 42);
+            this.panel1.Size = new System.Drawing.Size(377, 27);
             this.panel1.TabIndex = 9;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(338, 6);
+            this.btnCancel.Location = new System.Drawing.Point(225, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(95, 33);
+            this.btnCancel.Size = new System.Drawing.Size(63, 21);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(439, 6);
+            this.btnSave.Location = new System.Drawing.Point(293, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 33);
+            this.btnSave.Size = new System.Drawing.Size(82, 21);
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Save Order";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -429,8 +486,9 @@
             this.panel2.Controls.Add(this.lblComments);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(565, 500);
+            this.panel2.Size = new System.Drawing.Size(377, 325);
             this.panel2.TabIndex = 10;
             // 
             // panel3
@@ -438,9 +496,10 @@
             this.panel3.Controls.Add(this.lstOrderLines);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 500);
+            this.panel3.Location = new System.Drawing.Point(0, 325);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(565, 123);
+            this.panel3.Size = new System.Drawing.Size(377, 80);
             this.panel3.TabIndex = 11;
             // 
             // panel4
@@ -449,38 +508,22 @@
             this.panel4.Controls.Add(this.btnRemove);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(565, 43);
+            this.panel4.Size = new System.Drawing.Size(377, 28);
             this.panel4.TabIndex = 7;
-            // 
-            // lblPremise
-            // 
-            this.lblPremise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPremise.AutoSize = true;
-            this.lblPremise.Location = new System.Drawing.Point(394, 28);
-            this.lblPremise.Name = "lblPremise";
-            this.lblPremise.Size = new System.Drawing.Size(91, 20);
-            this.lblPremise.TabIndex = 21;
-            this.lblPremise.Text = "Premise ID:";
-            // 
-            // txtPremise
-            // 
-            this.txtPremise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPremise.Location = new System.Drawing.Point(419, 59);
-            this.txtPremise.Name = "txtPremise";
-            this.txtPremise.Size = new System.Drawing.Size(130, 26);
-            this.txtPremise.TabIndex = 22;
             // 
             // MainOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(565, 665);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(377, 432);
             this.Name = "MainOrder";
-            this.Size = new System.Drawing.Size(565, 665);
+            this.Size = new System.Drawing.Size(377, 432);
             this.Load += new System.EventHandler(this.MainOrder_Load);
             this.grpShipping.ResumeLayout(false);
             this.grpShipping.PerformLayout();
