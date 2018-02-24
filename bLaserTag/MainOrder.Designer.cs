@@ -136,7 +136,7 @@
             this.txtPremise.Margin = new System.Windows.Forms.Padding(2);
             this.txtPremise.Name = "txtPremise";
             this.txtPremise.Size = new System.Drawing.Size(88, 20);
-            this.txtPremise.TabIndex = 22;
+            this.txtPremise.TabIndex = 4;
             // 
             // lblPremise
             // 
@@ -155,7 +155,7 @@
             this.txtShipperNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtShipperNumber.Name = "txtShipperNumber";
             this.txtShipperNumber.Size = new System.Drawing.Size(117, 20);
-            this.txtShipperNumber.TabIndex = 20;
+            this.txtShipperNumber.TabIndex = 3;
             // 
             // lblShippingAccount
             // 
@@ -173,7 +173,7 @@
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(138, 20);
-            this.txtPhone.TabIndex = 16;
+            this.txtPhone.TabIndex = 13;
             // 
             // txtEmail
             // 
@@ -181,7 +181,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(198, 20);
-            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TabIndex = 12;
             // 
             // cmbShippingMethods
             // 
@@ -191,7 +191,7 @@
             this.cmbShippingMethods.Margin = new System.Windows.Forms.Padding(2);
             this.cmbShippingMethods.Name = "cmbShippingMethods";
             this.cmbShippingMethods.Size = new System.Drawing.Size(133, 21);
-            this.cmbShippingMethods.TabIndex = 18;
+            this.cmbShippingMethods.TabIndex = 2;
             // 
             // lblShippingMethod
             // 
@@ -210,7 +210,7 @@
             this.txtState.Margin = new System.Windows.Forms.Padding(2);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(40, 20);
-            this.txtState.TabIndex = 14;
+            this.txtState.TabIndex = 9;
             // 
             // txtPostal
             // 
@@ -219,7 +219,7 @@
             this.txtPostal.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostal.Name = "txtPostal";
             this.txtPostal.Size = new System.Drawing.Size(69, 20);
-            this.txtPostal.TabIndex = 13;
+            this.txtPostal.TabIndex = 10;
             // 
             // txtCountry
             // 
@@ -228,7 +228,7 @@
             this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(40, 20);
-            this.txtCountry.TabIndex = 12;
+            this.txtCountry.TabIndex = 11;
             // 
             // txtCity
             // 
@@ -238,7 +238,7 @@
             this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(110, 20);
-            this.txtCity.TabIndex = 11;
+            this.txtCity.TabIndex = 8;
             // 
             // txtAddress2
             // 
@@ -248,7 +248,7 @@
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(352, 20);
-            this.txtAddress2.TabIndex = 10;
+            this.txtAddress2.TabIndex = 7;
             // 
             // txtAddress1
             // 
@@ -258,7 +258,7 @@
             this.txtAddress1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(352, 20);
-            this.txtAddress1.TabIndex = 9;
+            this.txtAddress1.TabIndex = 6;
             // 
             // txtName
             // 
@@ -266,7 +266,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(323, 20);
-            this.txtName.TabIndex = 8;
+            this.txtName.TabIndex = 5;
             // 
             // lblPhone
             // 
@@ -358,7 +358,7 @@
             this.chkRush.Margin = new System.Windows.Forms.Padding(2);
             this.chkRush.Name = "chkRush";
             this.chkRush.Size = new System.Drawing.Size(78, 17);
-            this.chkRush.TabIndex = 3;
+            this.chkRush.TabIndex = 1;
             this.chkRush.Text = "Rush order";
             this.chkRush.UseVisualStyleBackColor = true;
             // 
@@ -371,7 +371,7 @@
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
             this.txtComments.Size = new System.Drawing.Size(365, 52);
-            this.txtComments.TabIndex = 4;
+            this.txtComments.TabIndex = 14;
             // 
             // lblComments
             // 
@@ -396,7 +396,7 @@
             this.lstOrderLines.MultiSelect = false;
             this.lstOrderLines.Name = "lstOrderLines";
             this.lstOrderLines.Size = new System.Drawing.Size(377, 52);
-            this.lstOrderLines.TabIndex = 6;
+            this.lstOrderLines.TabIndex = 17;
             this.lstOrderLines.UseCompatibleStateImageBehavior = false;
             this.lstOrderLines.View = System.Windows.Forms.View.Details;
             this.lstOrderLines.SelectedIndexChanged += new System.EventHandler(this.lstOrderLines_SelectedIndexChanged);
@@ -424,7 +424,7 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(21, 21);
-            this.btnAdd.TabIndex = 8;
+            this.btnAdd.TabIndex = 15;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -437,7 +437,7 @@
             this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(21, 21);
-            this.btnRemove.TabIndex = 7;
+            this.btnRemove.TabIndex = 16;
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
@@ -459,7 +459,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 21);
-            this.btnCancel.TabIndex = 21;
+            this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -471,7 +471,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(82, 21);
-            this.btnSave.TabIndex = 22;
+            this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save Order";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);

@@ -75,11 +75,22 @@ namespace bLaserTag
         private void btnModifyDefaultOrder_Click(object sender, EventArgs e)
         {
             var orderModifier = new MainOrder();
+            
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
+            var window = new Form
+            {
+                Parent = this.Parent,
+                StartPosition = FormStartPosition.CenterParent,
+                Text = "Default Order",
+                Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")))
+            };
 
-            var window = new Form();
             window.Controls.Add(orderModifier);
             orderModifier.Dock = DockStyle.Fill;
-            window.Size = new System.Drawing.Size(orderModifier.MinimumSize.Width + 25, orderModifier.MinimumSize.Height + 50);
+            window.MinimumSize = new System.Drawing.Size(orderModifier.MinimumSize.Width + 25, orderModifier.MinimumSize.Height + 50);
+            window.Size = window.MinimumSize;
+
+
             orderModifier.OrderCompleted += (s, order) =>
             {
                 Program.UpdateDefaultOrder(order);

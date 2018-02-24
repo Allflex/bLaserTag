@@ -35,8 +35,6 @@ namespace bLaserTag
             fileName = System.IO.Path.ChangeExtension(fileName, "xml");
             fileName = System.IO.Path.Combine(Program.PendingOrdersDirectory, fileName);
             tmp.Save(fileName);
-
-            //MessageBox.Show("Method not implemented\n" + fileName);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +45,8 @@ namespace bLaserTag
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var settings = new Settings();
+            settings.Parent = this.Parent;
+            settings.StartPosition = FormStartPosition.CenterParent;
             settings.ShowDialog();
         }
 
