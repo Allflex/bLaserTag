@@ -111,6 +111,7 @@
             this.btnTransmit.TabIndex = 0;
             this.btnTransmit.Text = "Process Batch";
             this.btnTransmit.UseVisualStyleBackColor = true;
+            this.btnTransmit.Click += new System.EventHandler(this.btnTransmit_Click);
             // 
             // lstPendingOrders
             // 

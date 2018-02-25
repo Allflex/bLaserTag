@@ -11,6 +11,7 @@ namespace bLaserTag
 {
     public partial class PendingOrders : UserControl
     {
+        FileSystemWatcher watcher;
         private AllfleXML.FlexOrder.OrderHeader SelectedOrder;
         private readonly ContextMenu _contextMenu;
         private Dictionary<string, AllfleXML.FlexOrder.OrderHeader> pendingOrders = new Dictionary<string, AllfleXML.FlexOrder.OrderHeader>();
@@ -39,7 +40,7 @@ namespace bLaserTag
         {
             if (DesignMode) return;
 
-            var watcher = new FileSystemWatcher(Program.PendingOrdersDirectory, "*.xml");
+            watcher = new FileSystemWatcher(Program.PendingOrdersDirectory, "*.xml");
             watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName;
 
             watcher.Changed += delegate (object s, FileSystemEventArgs evt) { LoadFiles(); };
@@ -154,5 +155,21 @@ namespace bLaserTag
         }
 
         #endregion
+
+        private void btnTransmit_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("This method isn't implemented yet.\nI will move the order files to the sent folder if you click \"Yes\".\nI will move the order files to the error folder if you click \"No\".\nI will not move the files if you click \"Cancel\".", "Test harness", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Cancel) return;
+            foreach(var order in pendingOrders)
+            {
+                // TODO: Show loading
+                // TODO: Process order and get success/error response
+                // TODO: Set dir based on success/error response from previous function
+
+                var dir = (result == DialogResult.Yes) ? Program.SentOrdersDirectory : Program.ErrorOrdersDirectory;
+                var newFilePath = Path.Combine(dir, Path.GetFileName(order.Key));
+                System.IO.File.Move(order.Key, newFilePath);
+            }
+        }
     }
 }

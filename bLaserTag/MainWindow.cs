@@ -48,6 +48,9 @@ namespace bLaserTag
             settings.Parent = this.Parent;
             settings.StartPosition = FormStartPosition.CenterParent;
             settings.ShowDialog();
+
+            if (settings.DialogResult != DialogResult.OK) return;
+            mainOrder1.LoadDefaultOrder();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

@@ -82,7 +82,7 @@
             this.txtApiKey.Location = new System.Drawing.Point(59, 38);
             this.txtApiKey.Name = "txtApiKey";
             this.txtApiKey.Size = new System.Drawing.Size(236, 20);
-            this.txtApiKey.TabIndex = 3;
+            this.txtApiKey.TabIndex = 2;
             // 
             // lblAPIKey
             // 
@@ -118,7 +118,7 @@
             this.txtOrdersDirectory.Location = new System.Drawing.Point(97, 64);
             this.txtOrdersDirectory.Name = "txtOrdersDirectory";
             this.txtOrdersDirectory.Size = new System.Drawing.Size(236, 20);
-            this.txtOrdersDirectory.TabIndex = 7;
+            this.txtOrdersDirectory.TabIndex = 3;
             // 
             // lblOrdersDirectory
             // 
@@ -135,7 +135,7 @@
             this.btnDefaultOrderBrowse.Location = new System.Drawing.Point(339, 91);
             this.btnDefaultOrderBrowse.Name = "btnDefaultOrderBrowse";
             this.btnDefaultOrderBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnDefaultOrderBrowse.TabIndex = 8;
+            this.btnDefaultOrderBrowse.TabIndex = 6;
             this.btnDefaultOrderBrowse.Text = "Browse";
             this.btnDefaultOrderBrowse.UseVisualStyleBackColor = true;
             this.btnDefaultOrderBrowse.Click += new System.EventHandler(this.btnDefaultOrderBrowse_Click);
@@ -146,7 +146,7 @@
             this.btnBrowseOrdersDirectory.Location = new System.Drawing.Point(339, 62);
             this.btnBrowseOrdersDirectory.Name = "btnBrowseOrdersDirectory";
             this.btnBrowseOrdersDirectory.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseOrdersDirectory.TabIndex = 9;
+            this.btnBrowseOrdersDirectory.TabIndex = 4;
             this.btnBrowseOrdersDirectory.Text = "Browse";
             this.btnBrowseOrdersDirectory.UseVisualStyleBackColor = true;
             this.btnBrowseOrdersDirectory.Click += new System.EventHandler(this.btnBrowseOrdersDirectory_Click);
@@ -157,7 +157,7 @@
             this.btnModifyDefaultOrder.Location = new System.Drawing.Point(286, 120);
             this.btnModifyDefaultOrder.Name = "btnModifyDefaultOrder";
             this.btnModifyDefaultOrder.Size = new System.Drawing.Size(128, 23);
-            this.btnModifyDefaultOrder.TabIndex = 10;
+            this.btnModifyDefaultOrder.TabIndex = 7;
             this.btnModifyDefaultOrder.Text = "Modify Default Order";
             this.btnModifyDefaultOrder.UseVisualStyleBackColor = true;
             this.btnModifyDefaultOrder.Click += new System.EventHandler(this.btnModifyDefaultOrder_Click);
@@ -197,7 +197,7 @@
             this.btnCancel.Location = new System.Drawing.Point(262, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 1;
+            this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -208,7 +208,7 @@
             this.btnSave.Location = new System.Drawing.Point(343, 15);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 0;
+            this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -243,7 +243,7 @@
             this.lstShippingMethods.Location = new System.Drawing.Point(3, 52);
             this.lstShippingMethods.Name = "lstShippingMethods";
             this.lstShippingMethods.Size = new System.Drawing.Size(424, 197);
-            this.lstShippingMethods.TabIndex = 1;
+            this.lstShippingMethods.TabIndex = 10;
             this.lstShippingMethods.UseCompatibleStateImageBehavior = false;
             this.lstShippingMethods.View = System.Windows.Forms.View.Details;
             // 
@@ -274,7 +274,7 @@
             this.btnRemove.Location = new System.Drawing.Point(38, 7);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(23, 23);
-            this.btnRemove.TabIndex = 1;
+            this.btnRemove.TabIndex = 9;
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
@@ -285,7 +285,7 @@
             this.btnAdd.Location = new System.Drawing.Point(9, 7);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(23, 23);
-            this.btnAdd.TabIndex = 0;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
